@@ -1,6 +1,6 @@
 "use client";
 
-import { nav, site } from "@/content/landing";
+import { hero, nav, site } from "@/content/landing";
 import type { CheckoutMode } from "@/lib/checkout";
 import { CheckoutButton } from "@/components/checkout-button";
 import { Container } from "@/components/ui/container";
@@ -46,7 +46,7 @@ export function SiteHeader({ checkoutMode, waitlistUrl }: SiteHeaderProps) {
             waitlistUrl={waitlistUrl}
             className="!min-h-10 !px-4 !py-2 !text-sm"
           >
-            Онлайн запись
+            {hero.payCta}
           </CheckoutButton>
         </div>
 
@@ -83,7 +83,7 @@ export function SiteHeader({ checkoutMode, waitlistUrl }: SiteHeaderProps) {
               </a>
             ))}
             <CheckoutButton mode={checkoutMode} waitlistUrl={waitlistUrl}>
-              Онлайн запись
+              {hero.payCta}
             </CheckoutButton>
           </Container>
         </div>

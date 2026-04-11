@@ -11,7 +11,7 @@ type CheckoutButtonProps = {
   children: React.ReactNode;
   className?: string;
   variant?: ButtonVariant;
-  /** В режиме waitlist: явный URL или якорь (иначе NEXT_PUBLIC_WAITLIST_URL или #pricing). */
+  /** В режиме waitlist: явный URL или якорь (иначе NEXT_PUBLIC_WAITLIST_URL или #faq). */
   waitlistHref?: string;
 };
 
@@ -40,7 +40,7 @@ export function CheckoutButton({
 
   if (mode === "waitlist") {
     const resolved =
-      waitlistHref?.trim() || waitlistUrl.trim() || "#pricing";
+      waitlistHref?.trim() || waitlistUrl.trim() || "#faq";
     const href = resolved;
     const external = href.startsWith("http");
     return (
